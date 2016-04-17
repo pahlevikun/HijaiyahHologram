@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinatorFAB"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="7dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:minHeight="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <com.github.siyamed.shapeimageview.CircularImageView
+                    android:id="@+id/ivDetailHijaiyah"
+                    android:layout_margin="10dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_noimage"
+                    app:siBorderWidth="7dp"
+                    app:siBorderColor="@color/colorPrimaryDark"/>
+                <TextView android:id="@+id/tvNamaDetail"
+                    android:text="Nama Huruf Hijaiyah"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="outsideOverlay"
+            android:id="@+id/lokasi_fab_scroll">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView android:id="@+id/tvInformasiUmum"
+                    android:text="Informasi Umum"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorTextTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"/>
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/cvInformasiHijaiyah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/linearLayoutInformasiHijaiyah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_margin="5dp">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:id="@+id/ivInformasiHijaiyah"
+                                android:src="@drawable/ic_jabatan"
+                                android:scaleType="fitCenter"
+                                android:layout_margin="10dp"/>
+                            <TextView android:id="@+id/tvInformasiHijaiyah"
+                                android:text="Jabatan Dosen"
+                                android:textSize="13sp"
+                                android:textColor="@color/colorTextInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <TextView android:id="@+id/tvCaraMembaca"
+                    android:text="Cara Membaca"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorTextTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"/>
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/cvSitus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/linearLayoutCaraMembacaHijaiyah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_margin="5dp">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:id="@+id/ivCaraMembacaHijaiyah"
+                                android:src="@drawable/ic_telepon"
+                                android:scaleType="fitCenter"
+                                android:layout_margin="10dp"/>
+                            <TextView android:id="@+id/tvCaraMembacaHijaiyah"
+                                android:text="Telepon Dosen"
+                                android:textSize="13sp"
+                                android:textColor="@color/colorTextInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                    <Button
+                        android:id="@+id/tombolHologramHijaiyah"
+                        android:layout_margin="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:drawablePadding="10dp"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:text="Lihat Hologram"
+                        android:textStyle="bold"
+                        android:background="@drawable/actionvideobutton"
+                        style="?android:attr/borderlessButtonStyle"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
